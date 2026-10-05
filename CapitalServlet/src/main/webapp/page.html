@@ -1,0 +1,15 @@
+<h1 style = "color:red ; text-align : center;"> Html to servlet using Javascript </h1>
+Select State : <form name="frm" action="capitalurl" method="get"> 
+				<select name = "state" onchange = "fun()">
+				<option value= "-1" selected>Select State</option>
+				<option value = "0"> Maharashtra </option>
+				<option value = "1"> Karnataka </option>
+				<option value = "2"> Gujrat </option>
+				</select>
+				</form>
+				
+				<script language = "javascript"> 
+				function fun() {
+					document.frm.submit();
+					}
+				</script>
