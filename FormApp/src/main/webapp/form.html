@@ -1,0 +1,22 @@
+<h1 style="color:blue ; text-align:center;"> Form Validation</h1>
+
+<form name="frm" action="formurl" method="post" onsubmit="return validate(this)">
+
+Person Name: 
+			<input type ="text" name="pname"> <span id="pnameerror" style="color:red"> </span>
+			<br><br>
+Person Age: 
+			<input type = "text" name = "page"> <span id="pageerror" style="color:red"> </span>
+			<br><br>
+Mobile Number: 
+			<input type = "text" name ="mobile"> <span id="mobileerror" style="color:red"> </span>
+			<br><br>
+
+<input type = "submit" value="Check Eligibility">
+
+<input type = "hidden"  name = "validateflag"  value = "false">
+
+</form>
+
+<script language = "javascript" src="js/validate.js">
+</script>
