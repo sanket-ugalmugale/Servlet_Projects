@@ -1,0 +1,73 @@
+<h1 style="color:red ; text-align:center;"> Form Validation</h1>
+
+<form name="frm" action="validateurl" method="post" onsubmit="return validate(this)">
+
+Person Name: 
+			<input type ="text" name="pname"> 
+			<br><br>
+Person Age: 
+			<input type = "text" name = "page">
+			<br><br>
+Mobile Number: 
+			<input type = "text" name ="mobile">
+			<br><br>
+
+<input type = "submit" value="Check Eligibility">
+
+<input type = "hidden"  name = "validateflag"  value = "false">
+
+</form>
+
+<script language = "javascript">
+	function validate(frm){
+		let name=frm.pname.value;
+			let age=frm.page.value;
+				let mobile=frm.mobile.value;
+					let flag=true;
+				
+				if(name=="")
+					{
+						flag=false;
+						alert("name must not be empty");
+						frm.pname.focus();
+					}
+				
+				if(age=="")
+					{
+						flag=false;
+						alert("age must not be empty");
+						frm.page.focus();
+					}
+				
+				else if(isNaN(age))
+					{
+						flag=false;
+						alert("age must be numeric");
+						frm.page.focus();
+					}
+				
+				else if(age < 0 || age > 100)
+					{
+						flag = false;
+						alert("age must be greater than 0 and less than 100");
+						frm.page.focus();
+					}
+				
+				if(mobile=="")
+					{
+						flag=false;
+						alert("mobile must not be empty");
+						frm.mobile.focus();
+					}
+				
+				else if(mobile.length < 10 || mobile.length > 10)
+					{
+						flag=false;
+						alert("mobile number must exactly 10 digit");
+						frm.mobile.focus();
+					}
+				
+				frm.validateflag.value = "true";
+				return flag;
+	}
+</script>
