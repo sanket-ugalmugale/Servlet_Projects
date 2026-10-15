@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app>
+<servlet>
+<servlet-name>demo2</servlet-name>
+<servlet-class>com.tot.servlet.DemoFilter2</servlet-class>
+</servlet>
+<servlet-mapping>
+<servlet-name>demo2</servlet-name>
+<url-pattern>/demo</url-pattern>
+</servlet-mapping>
+
+<filter>
+    <filter-name>demo1</filter-name>
+    <filter-class>com.tot.servlet.DemoFilter</filter-class>
+</filter>
+
+<filter-mapping>
+    <filter-name>demo1</filter-name>
+    <url-pattern>/demo</url-pattern>
+</filter-mapping>
+</web-app>
