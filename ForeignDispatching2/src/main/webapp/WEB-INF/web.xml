@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app>
+	<servlet>
+	<servlet-name> def </servlet-name>
+	<servlet-class> com.tot.servlet.SecondServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+	<servlet-name> def </servlet-name>
+	<url-pattern> /defurl </url-pattern>
+	</servlet-mapping>
+</web-app>
